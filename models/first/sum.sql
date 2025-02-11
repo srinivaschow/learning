@@ -1,0 +1,1 @@
+select ordercostprice, ordersellingprice from globalmart_schema.orders
