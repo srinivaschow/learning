@@ -1,1 +1,4 @@
-select ordercostprice, ordersellingprice from globalmart_schema.orders
+select orderdate,
+sum(ordercostprice) as total_revenue 
+from globalmart_schema.orders
+group by orderdate
