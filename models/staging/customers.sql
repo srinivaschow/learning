@@ -1,7 +1,9 @@
+with customers as(
 select
 CustomerID,
 customername,
 segment,
 country,
-state from globalmart_schema.customers
-
+state from {{source('globalmart','customers')}}
+)
+select * from orders

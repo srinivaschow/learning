@@ -1,3 +1,4 @@
+with orders as(
 SELECT 
     OrderID,
     OrderDate,
@@ -7,4 +8,6 @@ SELECT
     ProductID,
     OrderCostPrice,
     OrderSellingPrice
-FROM globalmart_schema.orders
+FROM {{source('globalmart','orders')}}
+)
+select * from orders;

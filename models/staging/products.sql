@@ -1,6 +1,9 @@
+with products as(
 select
 category,
 ProductID,
 ProductName,
 subcategory
-from globalmart_schema.products
+from {{source('globalmart','products')}}
+)
+select * from products;
