@@ -1,3 +1,7 @@
+{{config(
+    materialized = 'table'
+)}}
+
 with orders as(
 SELECT 
     OrderID,
@@ -10,4 +14,4 @@ SELECT
     OrderSellingPrice
 FROM {{source('globalmart','orders')}}
 )
-select * from orders;
+select * from orders

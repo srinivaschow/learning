@@ -2,10 +2,9 @@ version: 2
 
 sources:
   - name: globalmart
-    database: raw
+    database: global_mart
     schema: globalmart_schema
     tables:
       - name: customers
       - name: orders
       - name: products
-
